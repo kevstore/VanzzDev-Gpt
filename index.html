@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>WORM GPT</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/settings.js"></script>
+</head>
+<body>
+<div id="startScreen" class="screen">
+  <img id="logo" class="logo-img" src="">
+  <div id="glitchText" class="glitch">WORM GPT</div>
+  <button id="startBtn" class="start-btn">START BOT</button>
+</div>
+
+<div id="loginScreen" class="screen hidden">
+  <div class="login-box">
+    <div class="login-title">LOGIN</div>
+    <input id="loginUser" class="login-input" placeholder="Username" autocomplete="off">
+    <input id="loginPass" class="login-input" placeholder="Password" type="password">
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button id="loginBtn" class="start-btn" style="flex:1">Masuk</button>
+      <button id="cancelLogin" class="start-btn" style="flex:1;background:#333">Batal</button>
+    </div>
+    <div class="footer-login">© by VanzzDev</div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header class="app-header">
+    <div id="appTitle">VanzzDev GPT</div>
+    <div id="userAvatar" class="user-avatar">W</div>
+  </header>
+
+  <div class="header-video">
+    <video id="heroVideo" autoplay muted loop playsinline>
+      <source id="heroSource" src="" type="video/mp4">
+    </video>
+    <div class="video-overlay">Dark Artificial Intelligence</div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <div id="chatOutput" class="chat-output" role="log" aria-live="polite"></div>
+      <div class="chat-row">
+        <input id="chatInput" class="chat-input" placeholder="Ketik pesan...">
+        <button id="sendBtn" class="send-btn">KIRIM</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
