@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>WORM GPT</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/settings.js"></script>
+</head>
+<body>
+<div id="wormAlert" class="worm-alert" aria-live="assertive"></div>
+
+<!-- START SCREEN -->
+<div id="startScreen" class="screen">
+  <div class="start-box">
+    <img id="startLogo" class="logo-img" src="" alt="logo">
+    <div id="glitchText" class="glitch" data-text="">WORM GPT</div>
+    <button id="startBtn" class="start-btn">START BOT</button>
+    <div class="small">Tekan START untuk memulai.</div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen hidden" aria-hidden="true">
+  <div class="login-box">
+    <div class="login-title">LOGIN</div>
+    <input id="loginUser" class="login-input" placeholder="Username" autocomplete="username">
+    <input id="loginPass" class="login-input" placeholder="Password" type="password" autocomplete="current-password">
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button id="loginBtn" class="start-btn" style="flex:1">Masuk</button>
+      <button id="cancelLogin" class="start-btn" style="flex:1;background:#333">Batal</button>
+    </div>
+    <div class="small">Admin utama: <code>Vanzdev88</code></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden" aria-hidden="true">
+  <header class="app-header">
+    <div class="header-left">
+      <div id="appTitle" class="header-logo">VanzzDev GPT</div>
+    </div>
+    <div class="header-right">
+      <button id="manageBtn" class="manage-btn">Manage Users</button>
+      <div id="userAvatar" class="user-avatar">W</div>
+    </div>
+  </header>
+
+  <div class="header-video-container">
+    <video id="heroVideo" class="header-video" autoplay muted loop playsinline>
+      <source id="heroSource" src="" type="video/mp4">
+    </video>
+    <div class="video-overlay">Dark Artificial Intelligence</div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <div class="chat-title" id="chatTitle">WORM GPT — Chat</div>
+      <div id="chatOutput" class="chat-output" role="log" aria-live="polite"></div>
+      <div class="chat-row">
+        <input id="chatInput" class="chat-input" placeholder="Ketik pesan...">
+        <button id="sendBtn" class="send-btn">KIRIM</button>
+      </div>
+      <div class="note">Semua tautan raw.githubusercontent dibersihkan dari respons AI.</div>
+    </section>
+  </main>
+</div>
+
+<!-- MANAGE MODAL -->
+<div id="manageModal" class="hidden" aria-hidden="true">
+  <div class="manage-box">
+    <h2 style="color:var(--accent);margin-top:0">Manage Users & Sewa</h2>
+    <div id="userList" style="max-height:260px;overflow:auto"></div>
+
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <input id="newUsername" placeholder="Username" class="chat-input" style="flex:1">
+      <input id="newPassword" placeholder="Password" class="chat-input" style="flex:1">
+      <select id="newRole" class="chat-input" style="width:120px">
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button id="addUserBtn" class="send-btn" style="flex:1">Tambah User</button>
+      <button id="closeManageBtn" class="start-btn" style="flex:1;background:#333">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
